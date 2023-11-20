@@ -4,16 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="app.css" />
+    <script src="app.js"></script>
     <title>Hackathon - Shopify</title>
   </head>
   <body>
     <header>
-      <div class="logo" tabindex="0" aria-label="Shopify Icon">
+      <a href="http://shopify.com" class="logo" tabindex="0" aria-label="Shopify Icon" >
         <img
           src="https://crushingit.tech/hackathon-assets/shopify-icon-desktop.svg"
           alt="shopify logo"
         />
-      </div>
+      </a>
       <div class="search">
         <img src="./assets/search-icon.svg" alt="search icon" />
         <input type="text" placeholder="Search" />
@@ -29,18 +30,18 @@
       </div>
     </header>
     <main class="container">
-      <section class="plan">
+      <div class="plan">
         <p>Extend your trial for $1/month for 3 months on select plans.</p>
         <div class="end">
-          <button>Select a plan</button>
-          <img src="./assets/close-icon.svg" alt="close icon" />
+          <a href="http://shopify.com/pricing">Select a plan</a>
+          <img src="./assets/close-icon.svg" alt="close icon" id="close" />
         </div>
-      </section>
-      <article class="setup_guide">
+      </div>
+      <div class="setup_guide">
         <section class="setup_guide_header">
           <div class="setup_guide_title">
             <h3>Setup guide</h3>
-            <img src="./assets/arrow-down-icon.svg" alt="arrow icon" />
+            <img src="./assets/arrow-down-icon.svg" alt="arrow icon" id="toggle_arrow" />
           </div>
           <p>Use this personalized guide to get your store up and running.</p>
           <div class="progress_tracker">
@@ -50,114 +51,121 @@
             </div>
           </div>
         </section>
-        <section class="setup_step">
-          <div class="setup_step_title">
-            <img src="./assets/dashed-circle.svg" alt="select icon" />
-            <h4>Customise your online store</h4>
-          </div>
-          <div class="setup_step_content">
-            <div class="left">
-              <p>
-                Choose a theme and add your logo, colours, and images to reflect
-                your brand.
-                <a href="">Learn more</a>
-              </p>
-              <button>Customize theme</button>
+        <div class="setup_steps">
+          <section class="setup_step">
+            <div class="setup_step_title">
+              <img src="./assets/dashed-circle.svg" alt="select icon" />
+              <h4>Customise your online store</h4>
             </div>
-            <div class="right">
-              <img
-                src="https://crushingit.tech/hackathon-assets/customise-store.png"
-                alt="customize store image"
-              />
+            <div class="setup_step_content active">
+              <div class="left">
+                <p>
+                  Choose a theme and add your logo, colours, and images to
+                  reflect your brand.
+                  <a href="">Learn more</a>
+                </p>
+                <button>Customize theme</button>
+              </div>
+              <div class="right">
+                <img
+                  src="https://crushingit.tech/hackathon-assets/customise-store.png"
+                  alt="customize store image"
+                />
+              </div>
             </div>
-          </div>
-        </section>
-        <section class="setup_step">
-          <div class="setup_step_title">
-            <img src="./assets/dashed-circle.svg" alt="select icon" />
-            <h4>Add your first product</h4>
-          </div>
-          <div class="setup_step_content">
-            <div class="left">
-              <p>
-                Write a description, add photos, and set pricing for the products you plan to sell.
-                <a href="">Learn more</a>
-              </p>
-              <button>Customize theme</button>
-              <a href="#" class="import">Import product</a>
+          </section>
+          <section class="setup_step">
+            <div class="setup_step_title">
+              <img src="./assets/dashed-circle.svg" alt="select icon" />
+              <h4>Add your first product</h4>
             </div>
-            <div class="right">
-              <img
-                src="https://crushingit.tech/hackathon-assets/product.png"
-                alt="customize store image"
-              />
+            <div class="setup_step_content">
+              <div class="left">
+                <p>
+                  Write a description, add photos, and set pricing for the
+                  products you plan to sell.
+                  <a href="">Learn more</a>
+                </p>
+                <button>Customize theme</button>
+                <a href="#" class="import">Import product</a>
+              </div>
+              <div class="right">
+                <img
+                  src="https://crushingit.tech/hackathon-assets/product.png"
+                  alt="customize store image"
+                />
+              </div>
             </div>
-          </div>
-        </section>
-        <section class="setup_step">
-          <div class="setup_step_title">
-            <img src="./assets/dashed-circle.svg" alt="select icon" />
-            <h4>Add a custom domain</h4>
-          </div>
-          <div class="setup_step_content">
-            <div class="left">
-              <p>
-                Your current domain is 222219.myshopify.com but you can add a custom domain to help customers find your online store. 
-                <a href="">Learn more</a>
-              </p>
-              <button>Add domain</button>
+          </section>
+          <section class="setup_step">
+            <div class="setup_step_title">
+              <img src="./assets/dashed-circle.svg" alt="select icon" />
+              <h4>Add a custom domain</h4>
             </div>
-            <div class="right">
-              <img
-                src="https://crushingit.tech/hackathon-assets/website.png"
-                alt="customize store image"
-              />
+            <div class="setup_step_content">
+              <div class="left">
+                <p>
+                  Your current domain is 222219.myshopify.com but you can add a
+                  custom domain to help customers find your online store.
+                  <a href="">Learn more</a>
+                </p>
+                <button>Add domain</button>
+              </div>
+              <div class="right">
+                <img
+                  src="https://crushingit.tech/hackathon-assets/website.png"
+                  alt="customize store image"
+                />
+              </div>
             </div>
-          </div>
-        </section>
-        <section class="setup_step">
-          <div class="setup_step_title">
-            <img src="./assets/dashed-circle.svg" alt="select icon" />
-            <h4>Name your store</h4>
-          </div>
-          <div class="setup_step_content">
-            <div class="left">
-              <p>
-                Your temporary store name is currently Davii collections. The store name appears in your admin and your online store. 
-                <a href="">Learn more</a>
-              </p>
-              <button>Name store</button>
+          </section>
+          <section class="setup_step">
+            <div class="setup_step_title">
+              <img src="./assets/dashed-circle.svg" alt="select icon" />
+              <h4>Name your store</h4>
             </div>
-            <div class="right">
-              <img
-                src="https://crushingit.tech/hackathon-assets/name-store.png"
-                alt="customize store image"
-              />
+            <div class="setup_step_content">
+              <div class="left">
+                <p>
+                  Your temporary store name is currently Davii collections. The
+                  store name appears in your admin and your online store.
+                  <a href="">Learn more</a>
+                </p>
+                <button>Name store</button>
+              </div>
+              <div class="right">
+                <img
+                  src="https://crushingit.tech/hackathon-assets/name-store.png"
+                  alt="customize store image"
+                />
+              </div>
             </div>
-          </div>
-        </section>
-        <section class="setup_step">
-          <div class="setup_step_title">
-            <img src="./assets/dashed-circle.svg" alt="select icon" />
-            <h4>Set up a payment provider</h4>
-          </div>
-          <div class="setup_step_content">
-            <div class="left">
-              <p>
-                Choose a payment provider to start accepting payments. You'll need to create an account with the payment provider and set it up with your Shopify store.
-                <a href="">Learn more</a>
-              </p>
-              <button>Set up payment</button>
+          </section>
+          <section class="setup_step">
+            <div class="setup_step_title">
+              <img src="./assets/dashed-circle.svg" alt="select icon" />
+              <h4>Set up a payment provider</h4>
             </div>
-            <div class="right">
-              <img
-                src="https://crushingit.tech/hackathon-assets/payment.png"
-                alt="customize store image"
-              />
+            <div class="setup_step_content">
+              <div class="left">
+                <p>
+                  Choose a payment provider to start accepting payments. You'll
+                  need to create an account with the payment provider and set it
+                  up with your Shopify store.
+                  <a href="">Learn more</a>
+                </p>
+                <button>Set up payment</button>
+              </div>
+              <div class="right">
+                <img
+                  src="https://crushingit.tech/hackathon-assets/payment.png"
+                  alt="customize store image"
+                />
+              </div>
             </div>
-          </div>
-        </section>
-      </article>
+          </section>
+        </div>
+      </div>
     </main>
   </body>
 </html>

@@ -114,22 +114,25 @@ header {
   gap: 10px;
   align-items: center;
 }
-.end button {
+.end a {
+  text-decoration: none;
   cursor: pointer;
   padding: 8px 16px;
   border-radius: 8px;
+  color: #000;
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
-.end button:hover {
+.end a:hover {
   background-color: #f7f7f7;
 }
-.end button:focus {
+.end a:focus {
   outline: 1px solid #005bd3;
 }
 .end img {
   width: 24px;
   height: 24px;
+  cursor: pointer;
 }
 .setup_guide {
   display: flex;
@@ -138,6 +141,7 @@ header {
   padding: 16px;
   border-radius: 24px;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 16px;
 }
 .setup_guide_header {
   display: flex;
@@ -184,7 +188,9 @@ header {
   border-radius: 8px;
   width: 20%;
 }
-.setup_step {
+.setup_steps {
+  display: none;
+  flex-direction: column;
 }
 .setup_step_title {
   display: flex;
@@ -197,7 +203,7 @@ header {
   height: 24px;
 }
 .setup_step_content {
-  display: flex;
+  display: none;
   justify-content: space-between;
   align-items: center;
   margin-left: 3rem;
@@ -228,4 +234,7 @@ header {
   font-weight: 600;
   padding: 6px 12px;
   margin-left: 1rem;
+}
+.active {
+  display: flex;
 }
