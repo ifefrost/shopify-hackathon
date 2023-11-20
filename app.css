@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&family=Inter&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+header {
+  background-color: #1c181d;
+  color: #e3e3e3;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: #322f33;
+  padding-left: 10px;
+}
+.search:focus-within {
+  border: 2px solid #ebebeb;
+}
+.search:hover {
+  border: 1px solid #e1e1e1;
+}
+.search input {
+  width: 500px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  padding-left: 10px;
+}
+.search input:focus {
+  outline: none;
+}
+.search input::placeholder {
+  color: #b5b5b5;
+}
+.notification img {
+  width: 18px;
+  height: 18px;
+}
+.notification {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background-color: #322f33;
+  padding: 10px;
+  cursor: pointer;
+}
+.notification:hover {
+  background-color: #616161;
+}
+.info {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background-color: #322f33;
+  cursor: pointer;
+}
+.profile p{
+    padding: 10px;
+}
+.profile:hover {
+  background-color: #616161;
+}
+.profile-icon{
+    background-color: #36FBA1;
+    color: rgba(0,0,0,0.4);
+    padding: 8px;
+    border-radius: 8px;
+}
