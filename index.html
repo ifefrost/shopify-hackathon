@@ -4,15 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="app.css" />
+    <link
+      rel="shortcut icon"
+      href="https://crushingit.tech/hackathon-assets/shopify-icon.svg"
+      type="image/x-icon"
+    />
     <script src="app.js"></script>
     <title>Hackathon - Shopify</title>
   </head>
   <body>
     <header>
-      <a href="http://shopify.com" class="logo" tabindex="0" aria-label="Shopify Icon" >
+      <a
+        href="http://shopify.com"
+        class="logo"
+        tabindex="0"
+        aria-label="Shopify Icon"
+      >
         <img
           src="https://crushingit.tech/hackathon-assets/shopify-icon-desktop.svg"
           alt="shopify logo"
+          id="logo"
         />
       </a>
       <div class="search">
@@ -20,28 +31,98 @@
         <input type="text" placeholder="Search" />
       </div>
       <div class="info">
-        <div class="notification" tabindex="0">
+        <div class="notification" tabindex="0" role="button">
           <img src="./assets/bell-icon.svg" alt="notification icon" />
         </div>
-        <div class="profile" tabindex="0">
+        <div class="profile" tabindex="0" role="button">
           <p>Davii Collections</p>
           <span class="profile-icon">DC</span>
+        </div>
+      </div>
+      <div class="notification_menu">
+        <div class="notification_menu_header">
+          <h3>Alerts</h3>
+          <div>
+            <img
+              src="./assets/filter-icon.svg"
+              alt=""
+              tabindex="0"
+              role="button"
+            />
+            <img
+              src="./assets/circle-check-icon.svg"
+              alt="checked"
+              tabindex="0"
+              role="button"
+            />
+          </div>
+        </div>
+        <div class="notification_menu_content">
+          <p>Alerts about your store and account will show here</p>
+        </div>
+      </div>
+      <div class="profile_menu">
+        <div class="menu_section">
+          <div class="menu_horiz_item">
+            <span class="profile-icon">DC</span>
+            <p>Davii Collections</p>
+            <input type="checkbox" name="menu_check" id="store" checked />
+          </div>
+          <div class="menu_item">
+            <img src="./assets/store-icon.svg" alt="store icon" />
+            <p>All stores</p>
+          </div>
+        </div>
+        <hr />
+        <div class="menu_section">
+          <div class="menu_item">
+            <p>Help Center</p>
+          </div>
+          <div class="menu_item">
+            <p>Changelog</p>
+          </div>
+          <div class="menu_item">
+            <p>Community forums</p>
+          </div>
+          <div class="menu_item">
+            <p>Hire a Shopify Partner</p>
+          </div>
+          <div class="menu_item">
+            <p>Keyboard shortcuts</p>
+          </div>
+        </div>
+        <hr />
+        <div class="menu_section">
+            <div class="menu_vert_item">
+                <p>David Micheal</p>
+                <p class="menu_item_email">davidmicheal@gmail.com</p>
+            </div>
+            <div class="menu_item">
+                <p>Manage account</p>
+            </div>
+            <div class="menu_item">
+                <p>Log out</p>
+            </div>
         </div>
       </div>
     </header>
     <main class="container">
       <div class="plan">
-        <p>Extend your trial for $1/month for 3 months on select plans.</p>
         <div class="end">
+          <p>Extend your trial for $1/month for 3 months on select plans.</p>
           <a href="http://shopify.com/pricing">Select a plan</a>
-          <img src="./assets/close-icon.svg" alt="close icon" id="close" />
         </div>
+        <img src="./assets/close-icon.svg" alt="close icon" id="close" />
       </div>
       <div class="setup_guide">
         <section class="setup_guide_header">
           <div class="setup_guide_title">
             <h3>Setup guide</h3>
-            <img src="./assets/arrow-down-icon.svg" alt="arrow icon" id="toggle_arrow" />
+            <img
+              src="./assets/arrow-down-icon.svg"
+              alt="arrow icon"
+              id="toggle_arrow"
+            />
           </div>
           <p>Use this personalized guide to get your store up and running.</p>
           <div class="progress_tracker">
@@ -52,7 +133,7 @@
           </div>
         </section>
         <div class="setup_steps">
-          <section class="setup_step">
+          <section class="setup_step selected">
             <div class="setup_step_title">
               <img src="./assets/dashed-circle.svg" alt="select icon" />
               <h4>Customise your online store</h4>
