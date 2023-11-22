@@ -63,56 +63,74 @@
       </div>
       <div class="profile_menu">
         <div class="menu_section">
-          <div class="menu_horiz_item">
+          <a
+            href="http://admin.shopify.com"
+            class="menu_horiz_item"
+            tabindex="0"
+            role="menuitem"
+          >
             <span class="profile-icon">DC</span>
             <p>Davii Collections</p>
-            <input type="checkbox" name="menu_check" id="store" checked />
-          </div>
-          <div class="menu_item">
+            <input
+              type="checkbox"
+              name="menu_check"
+              id="store"
+              checked
+              role="menuitemcheckbox"
+            />
+          </a>
+          <a href="http://admin.shopify.com" class="menu_item" tabindex="0" role="menuitem">
             <img src="./assets/store-icon.svg" alt="store icon" />
             <p>All stores</p>
-          </div>
+          </a>
         </div>
         <hr />
         <div class="menu_section">
-          <div class="menu_item">
+          <a href="http://admin.shopify.com" class="menu_item" tabindex="0" role="menuitem">
             <p>Help Center</p>
-          </div>
-          <div class="menu_item">
+          </a>
+          <a href="http://admin.shopify.com" class="menu_item" tabindex="0" role="menuitem">
             <p>Changelog</p>
-          </div>
-          <div class="menu_item">
+          </a>
+          <a href="http://admin.shopify.com" class="menu_item" tabindex="0" role="menuitem">
             <p>Community forums</p>
-          </div>
-          <div class="menu_item">
+          </a>
+          <a href="http://admin.shopify.com" class="menu_item" tabindex="0" role="menuitem">
             <p>Hire a Shopify Partner</p>
-          </div>
-          <div class="menu_item">
+          </a>
+          <a href="http://admin.shopify.com" class="menu_item" tabindex="0" role="menuitem">
             <p>Keyboard shortcuts</p>
-          </div>
+          </a>
         </div>
         <hr />
         <div class="menu_section">
-            <div class="menu_vert_item">
-                <p>David Micheal</p>
-                <p class="menu_item_email">davidmicheal@gmail.com</p>
-            </div>
-            <div class="menu_item">
-                <p>Manage account</p>
-            </div>
-            <div class="menu_item">
-                <p>Log out</p>
-            </div>
+          <a href="http://admin.shopify.com" class="menu_vert_item" tabindex="0" role="menuitem">
+            <p>David Micheal</p>
+            <p class="menu_item_email">davidmicheal@gmail.com</p>
+          </a>
+          <a href="http://admin.shopify.com" class="menu_item" tabindex="0" role="menuitem">
+            <p>Manage account</p>
+          </a>
+          <a href="http://admin.shopify.com" class="menu_item" tabindex="0" role="menuitem">
+            <p>Log out</p>
+          </a>
         </div>
       </div>
     </header>
     <main class="container">
-      <div class="plan">
-        <div class="end">
+      <div class="plan" role="alertdialog">
+        <div class="end" role="document" tabindex="0">
           <p>Extend your trial for $1/month for 3 months on select plans.</p>
-          <a href="http://shopify.com/pricing">Select a plan</a>
+          <a href="http://shopify.com/pricing" tabindex="0" role="button"
+            >Select a plan</a
+          >
         </div>
-        <img src="./assets/close-icon.svg" alt="close icon" id="close" />
+        <img
+          src="./assets/close-icon.svg"
+          alt="close icon"
+          id="close"
+          tabindex="0"
+        />
       </div>
       <div class="setup_guide">
         <section class="setup_guide_header">
@@ -122,6 +140,7 @@
               src="./assets/arrow-down-icon.svg"
               alt="arrow icon"
               id="toggle_arrow"
+              tabindex="0"
             />
           </div>
           <p>Use this personalized guide to get your store up and running.</p>

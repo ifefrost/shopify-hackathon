@@ -150,6 +150,13 @@ header {
   transition: all 0.1s cubic-bezier(0.16, 1, 0.5, 1);
   z-index: 1;
 }
+.profile_menu a{
+    text-decoration: none;
+    color: #475467;
+}
+.profile_menu a:hover{
+    background-color: #f3f3f3;
+}
 .menu_horiz_item {
   display: flex;
   align-items: center;
@@ -165,14 +172,16 @@ header {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 4px 8px;
-  margin: 0.875rem 0;
+  padding: 8px;
+  margin: 0.375rem 0;
+  cursor: pointer;
+  border-radius: 4px;
 }
 .menu_item img {
   width: 24px;
   height: 24px;
 }
-.menu_item: focus {
+.menu_item:focus, .menu_horiz_item:focus, .menu_vert_item:focus {
   outline: 2px solid #005bd3;
   border-radius: 4px;
 }
@@ -224,7 +233,7 @@ header {
   background-color: #f7f7f7;
 }
 .plan a:focus {
-  outline: 1px solid #005bd3;
+  outline: 2px solid #005bd3;
 }
 .plan img {
   width: 24px;

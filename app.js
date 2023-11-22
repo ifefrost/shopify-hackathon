@@ -69,9 +69,21 @@ document.addEventListener("DOMContentLoaded", function () {
       toggle_arrow.src = "./assets/arrow-down-icon.svg";
     }
   });
+  toggle_arrow.addEventListener("keydown", (e) => {
+    if (e.code === "Space" || e.code === "Enter") {
+      e.preventDefault();
+      toggle_arrow.click();
+    }
+  });
   const close = document.querySelector("#close");
   close.addEventListener("click", () => {
     document.querySelector(".plan").setAttribute("style", "display:none;");
+  });
+  close.addEventListener("keydown", (e) => {
+    if (e.code === "Space" || e.code === "Enter") {
+      e.preventDefault();
+      close.click();
+    }
   });
   const logo = document.querySelector("#logo");
   if (window.innerWidth < 768) {
