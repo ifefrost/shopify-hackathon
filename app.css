@@ -51,9 +51,9 @@ header {
 .search input::placeholder {
   color: #b5b5b5;
 }
-.notification img {
-  width: 18px;
-  height: 18px;
+.notification svg {
+  width: 1.5rem;
+  height: 1.5rem;
 }
 .notification {
   display: flex;
@@ -96,7 +96,7 @@ header {
   align-items: center;
   gap: 10px;
 }
-.notification_menu_header img:focus {
+.notification_menu_header svg:focus {
   outline: 2px solid #005bd3;
   border-radius: 4px;
 }
@@ -150,12 +150,12 @@ header {
   transition: all 0.1s cubic-bezier(0.16, 1, 0.5, 1);
   z-index: 1;
 }
-.profile_menu a{
-    text-decoration: none;
-    color: #475467;
+.profile_menu a {
+  text-decoration: none;
+  color: #475467;
 }
-.profile_menu a:hover{
-    background-color: #f3f3f3;
+.profile_menu a:hover {
+  background-color: #f3f3f3;
 }
 .menu_horiz_item {
   display: flex;
@@ -181,7 +181,9 @@ header {
   width: 24px;
   height: 24px;
 }
-.menu_item:focus, .menu_horiz_item:focus, .menu_vert_item:focus {
+.menu_item:focus,
+.menu_horiz_item:focus,
+.menu_vert_item:focus {
   outline: 2px solid #005bd3;
   border-radius: 4px;
 }
@@ -235,7 +237,7 @@ header {
 .plan a:focus {
   outline: 2px solid #005bd3;
 }
-.plan img {
+.plan svg {
   width: 24px;
   height: 24px;
   cursor: pointer;
@@ -293,7 +295,6 @@ header {
   height: 4px;
   background-color: #000;
   border-radius: 8px;
-  width: 20%;
 }
 .setup_steps {
   display: none;
@@ -302,12 +303,19 @@ header {
 .setup_step_title {
   display: flex;
   align-items: center;
-  margin: 0.5rem;
+  margin: 0.25rem 0.5rem;
   gap: 10px;
 }
-.setup_step_title img {
-  width: 24px;
-  height: 24px;
+.checkmark svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.setup_step_title input[type="checkbox"] {
+  display: none;
+  pointer-events: none;
+}
+.setup_step_title input[type="checkbox"] + label {
+  cursor: pointer;
 }
 .setup_step_content {
   display: none;
@@ -334,7 +342,10 @@ header {
   -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 90%);
   mask-image: linear-gradient(to bottom, black 50%, transparent 95%);
 }
-.import {
+.left button:focus{
+  outline: 2px solid #005bd3;
+}
+.import_btn {
   text-decoration: none;
   color: #323232;
   font-size: 0.875rem;
@@ -347,8 +358,20 @@ header {
 }
 .selected {
   background-color: #f3f3f3;
-  padding: 8px;
+  padding: 0.5rem 0;
   border-radius: 8px;
+}
+.spin{
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
 }
 
 @media (max-width: 768px) {
